@@ -1,0 +1,47 @@
+{
+    "@type": "MessageCard",
+    "@context": "https://schema.org/extensions",
+    "summary": "Card \"Test card\"",
+    "themeColor": "0078D7",
+    "title": "Card created: \"Sumo Logic Alert!\"",
+    "sections": [
+        {
+            "activityTitle": "Kelly Hamm Test",
+            "activitySubtitle": "This is a simple webhook test",
+            "activityImage": "https://www.sumologic.com/wp-content/uploads/sumo-logic-logo.png",
+            "facts": [
+                {
+                    "name": "SearchName",
+                    "value": "{{SearchName}}"
+                },
+                {
+                    "name": "Search Desc:",
+                    "value": "{{SearchDescription}}"
+                }
+            ],
+            "text": "A simple set of text that could use sumo varaibles or a static notification string."
+        }
+    ],
+    "potentialAction": [
+        {
+            "@type": "OpenUri",
+            "name": "Go To Triggered Search in Sumo",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "{{SearchQueryUrl}}"
+                }
+            ]
+        },
+{
+            "@type": "OpenUri",
+            "name": "Go To DevOps Dashboard",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "https://help.sumologic.com/Dashboards-and-Alerts/Dashboards/Share_Dashboards/Share_a_Dashboard_Outside_Your_Org"
+                }
+            ]
+        }
+    ]
+}
